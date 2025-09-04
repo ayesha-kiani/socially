@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="rust">#9A5A5B</color>
+    <color name="coral">#D19F9E</color>
+    <color name="darkoral">#914140</color>
+
+
+
+
 </resources>

@@ -1,0 +1,265 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkoral">
+
+    <!-- Top bar container -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/status_icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/status_icons"
+            app:tint="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            app:tint="@color/black"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/status_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/signup_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/leftarrow"
+            app:tint="@color/white"
+            android:layout_gravity="start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="55dp"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socially"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+
+            android:layout_marginTop="-45dp"/>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create An Account and Sign Up"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/img_1"
+            android:layout_gravity="center"
+            android:layout_marginBottom="18dp"
+            />
+
+        <!-- Username Field -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+             />
+
+        <EditText
+            android:id="@+id/changeusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:hint="tejpatil064"
+            android:inputType="text"
+            android:paddingBottom="6dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <!-- Your Name Field -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:hint="Tejas"
+            android:paddingBottom="6dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <!-- Last Name Field -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Last name"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:hint="Patil"
+            android:paddingBottom="6dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <!-- Date of Birth Field -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:hint="DD/MM/YYYY"
+            android:paddingBottom="6dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <!-- email Field -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:hint="your@email.com"
+            android:paddingBottom="6dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <!-- password Field -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:hint="Password"
+            android:paddingBottom="6dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+        <Button
+            android:id="@+id/createaccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Create an Account"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blackline"
+        app:tint="@color/white"
+        android:layout_below="@id/signup_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+</RelativeLayout>

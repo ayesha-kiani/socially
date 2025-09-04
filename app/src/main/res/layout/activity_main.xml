@@ -1,19 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    android:paddingTop="10dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp">
 
+    <!-- Top bar container -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/status_icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/status_icons"
+            app:tint="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            app:tint="@color/black"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/status_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Center logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="Sociallay Logo"
+        android:src="@drawable/socially_logo"
+        android:layout_below="@id/top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp" />
+
+    <!-- Text below logo -->
     <TextView
+        android:id="@+id/from_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="25sp"
+        android:text="from"
+        android:textColor="@color/black"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="153dp"/>
+    <TextView
+        android:id="@+id/smd_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="SMD"
+        android:textColor="@color/rust"
+        android:layout_below="@id/from_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"/>
+    <ImageView
+        android:id="@+id/horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_below="@id/smd_text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

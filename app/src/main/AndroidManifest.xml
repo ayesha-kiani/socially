@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".login_detail"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
