@@ -12,13 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <activity
-            android:name=".register"
+            android:name=".item_search_result"
             android:exported="false" />
         <activity
-            android:name=".login_detail"
+            android:name=".Searchprofile"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".Explorepage"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".HomepagePostAdapter"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".StoriesAdapter"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".Homepage"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".LoginDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

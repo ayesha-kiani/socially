@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Assignment1</string>
+    <string name="my_text">This is &lt;b&gt;bold&lt;/b&gt; text</string>
+
 </resources>
