@@ -1,0 +1,214 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+    <!-- Custom Status Bar at absolute top -->
+    <ImageView
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/statusbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Background Story Image -->
+    <ImageView
+        android:id="@+id/storyImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/greece"
+        app:layout_constraintTop_toBottomOf="@id/statusbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Story Progress Bar (just below status bar) -->
+    <LinearLayout
+        android:id="@+id/progress_bar_container"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/statusbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/blackline"
+            android:backgroundTint="#808080" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/blackline"
+            android:backgroundTint="#D3D3D3" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/blackline"
+            android:backgroundTint="#D3D3D3" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/blackline"
+            android:backgroundTint="#D3D3D3" />
+    </LinearLayout>
+
+    <!-- User Info Bar: Profile pic & name at top left -->
+    <LinearLayout
+        android:id="@+id/top_info_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="48dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="6dp"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar_container"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/oval"
+            android:background="@drawable/circle_border"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Craig    4h"
+                android:textSize="13sp"
+                android:textColor="#FFF"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Close Button: overlays top right of info bar -->
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/close"
+        app:tint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Bottom Message Container (rounded top corners background) -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="14dp">
+
+        <!-- Message Box Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:paddingEnd="18dp"
+            android:gravity="center_vertical">
+
+            <!-- Camera Icon + Send Message (use CardView for soft corners) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:background="@drawable/send_msg_bcg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/camera_1"
+                        android:layout_marginEnd="10dp"
+                        app:tint="@color/rust" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"
+                        app:tint="@color/rust" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Send (paper plane) icon -->
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/share"
+                app:tint="@color/rust" />
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/Options"
+                app:tint="@color/rust" />
+        </LinearLayout>
+
+        <!-- Instagram pink pill/swipe bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="11dp"
+            android:paddingBottom="9dp">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="6dp"
+                android:background="@drawable/blackline"
+                android:backgroundTint="@color/rust"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

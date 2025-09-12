@@ -1,0 +1,218 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Simulated Status Bar -->
+    <RelativeLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FAF7F7"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/status_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:30"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/status_icon"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/status_icons"
+            app:tint="@color/black" />
+    </RelativeLayout>
+    <!-- Top chat/app bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#FAF7F7"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/statusbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/chevronleft"
+            app:tint="@color/rust"/>
+
+        <!-- Circle profile (initials) -->
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/is_search"
+            android:background="@drawable/circle_border"
+            android:scaleType="centerCrop"/>
+
+        <!-- Username -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="internshala"
+            android:textColor="@color/rust"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/video"
+            app:tint="@color/black"
+            android:layout_marginEnd="8dp"/>
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/information"
+            app:tint="@color/rust"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+    <!-- Message area (use a ScrollView for demo, replace with RecyclerView for real chat) -->
+    <ScrollView
+        android:id="@+id/message_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/statusbar"
+        app:layout_constraintBottom_toTopOf="@id/message_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <!-- Example Message Time -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4:49 PM"
+                android:textColor="#555"
+                android:textAlignment="center"
+                android:paddingTop="32dp"
+                android:paddingBottom="8dp"/>
+
+            <!-- Example sent message bubble -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:paddingEnd="16dp"
+                android:paddingBottom="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Hello"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:background="@drawable/chatbubble"
+                    android:backgroundTint="@color/darkoral"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom message bar -->
+    <LinearLayout
+        android:id="@+id/message_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_rounded"
+        android:backgroundTint="#D7D7D8"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp"
+        android:elevation="7dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/camera_1"
+            app:tint="@color/white"
+            android:background="@drawable/circle_border"
+            android:backgroundTint="@color/rust"
+            android:padding="4dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D7D7D8"
+            android:hint="Message..."
+            android:textSize="15sp"
+            android:paddingLeft="16dp"
+            android:textColor="#222"/>
+
+        <!-- Microphone -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/mic"
+            app:tint="@color/black"
+            android:layout_marginStart="8dp"
+            />
+
+        <!-- Gallery -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/gallery"
+            app:tint="@color/black"
+            android:layout_marginStart="8dp"
+            />
+
+        <!-- Sticker/Emoji -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/smiley"
+            app:tint="@color/black"
+            android:layout_marginStart="8dp"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

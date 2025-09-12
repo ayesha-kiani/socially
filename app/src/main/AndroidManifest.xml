@@ -12,20 +12,57 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <activity
-            android:name=".item_search_result"
+            android:name=".Call"
             android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
+            android:name=".Viewmyactivity"
+            android:exported="false" />
+        <activity
+            android:name=".Poststory"
+            android:exported="false" />
+        <activity
+            android:name=".Viewstory"
+            android:exported="false" />
+        <activity
+            android:name=".Post"
+            android:exported="false" />
+        <activity
+            android:name=".TakePicture"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".highlights"
+            android:exported="false" />
+
+        <activity
+            android:name=".DMs"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".You"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityFollowing"
+            android:exported="false" />
+
         <activity
             android:name=".Searchprofile"
             android:exported="false" />
         <activity
             android:name=".Explorepage"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".HomepagePostAdapter"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".StoriesAdapter"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".HomepagePostAdapter" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".StoriesAdapter" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".Homepage"
             android:exported="false" />

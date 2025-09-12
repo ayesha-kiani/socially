@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:id="@+id/main"
+android:background="@color/white">
+
+<!-- Scrollable content -->
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/bottom_navbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+        <!-- Top bar -->
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="#FFF">
+
+            <TextView
+                android:id="@+id/status_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:30"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:id="@+id/camera_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/camera"
+                android:layout_centerInParent="true"
+                app:tint="@color/black"/>
+
+            <ImageView
+                android:id="@+id/status_icon"
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                android:src="@drawable/status_icons"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/black"/>
+        </RelativeLayout>
+
+        <!-- Tabs section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Following"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#B73557"/>
+
+            <TextView
+                android:id="@+id/You"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="You"
+                android:gravity="center"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#B73557"/>
+
+        <!-- Static notification 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/oval"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_border"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="karennne liked 3 posts."
+                    android:textSize="15sp"
+                    android:textColor="#222"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/greece" android:layout_marginEnd="4dp"/>
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/greece" android:layout_marginEnd="4dp"/>
+                    <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/greece"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3h"
+                    android:textSize="13sp"
+                    android:textColor="#AAA"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Notification 1: Multiple users liked a photo, image on right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/oval"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_border" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kiero_d, zackjohn and craig_love"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#222"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="liked joshua_l photo. "
+                    android:textSize="14sp"
+                    android:textColor="#222"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3h"
+                    android:textSize="13sp"
+                    android:textColor="#AAA"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/oval"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Notification 2: User started following another user, no image on right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/oval"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_border" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kiero_d started following"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#222"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="craig_love."
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#222"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3h"
+                    android:textSize="13sp"
+                    android:textColor="#AAA"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+<!-- Fixed bottom navbar -->
+<LinearLayout
+    android:id="@+id/bottom_navbar"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/homeicon"
+        android:contentDescription="Home"
+        app:tint="@color/rust"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/nav_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/searchicon"
+        android:contentDescription="Search"
+        app:tint="@color/darkoral"
+        android:background="@color/coral"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/nav_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/addposticon"
+        android:contentDescription="Add"
+        app:tint="@color/rust"
+        android:padding="8dp"/>
+
+    <ImageView
+        android:id="@+id/nav_heart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/activityhearticon"
+        android:contentDescription="Likes"
+        app:tint="@color/rust"
+        android:padding="8dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/oval"
+        android:contentDescription="Profile"
+        android:scaleType="centerCrop"
+        android:padding="4dp" />
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
