@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#FFF">
+            android:background="@color/white">
 
             <!-- Tabs -->
             <LinearLayout
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:background="#FFF"
+                android:background="@color/white"
                 android:paddingTop="8dp">
 
                 <TextView
@@ -80,7 +80,7 @@
                     android:text="Following"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textColor="#B73557"/>
+                    android:textColor="@color/rust"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -89,19 +89,19 @@
                     android:text="You"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textColor="#B73557"/>
+                    android:textColor="@color/rust"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#B73557"/>
+                android:background="@color/darkoral"/>
 
             <!-- Follow Requests row -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Follow Requests"
-                android:textColor="#B73557"
+                android:textColor="@color/rust"
                 android:textSize="16sp"
                 android:padding="14dp"/>
 
@@ -111,13 +111,12 @@
                 android:layout_height="wrap_content"
                 android:text="New"
                 android:textStyle="bold"
-                android:textColor="#888"
+                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingTop="10dp"
                 android:paddingLeft="14dp"
                 android:paddingBottom="4dp"/>
 
-            <!-- Example New Notification -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
@@ -157,13 +156,12 @@
                 android:layout_height="wrap_content"
                 android:text="Today"
                 android:textStyle="bold"
-                android:textColor="#888"
+                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingTop="10dp"
                 android:paddingLeft="14dp"
                 android:paddingBottom="4dp"/>
 
-            <!-- Example Today Notification -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
@@ -209,7 +207,10 @@
                     android:src="@drawable/oval"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEE"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEE"/>
 
             <!-- This Week Header -->
             <TextView
@@ -217,13 +218,11 @@
                 android:layout_height="wrap_content"
                 android:text="This Week"
                 android:textStyle="bold"
-                android:textColor="#888"
+                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:paddingTop="10dp"
                 android:paddingLeft="14dp"
                 android:paddingBottom="4dp"/>
-            <!-- ...Add more notifications here as per previous examples... -->
-            <!-- This Week notification: mention -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -292,10 +291,16 @@
                     android:layout_marginLeft="8dp"/>
 
                 <Button
+                    android:id="@+id/msg_button1"
                     android:layout_width="wrap_content"
-                    android:layout_height="38dp"
+                    android:layout_height="wrap_content"
                     android:text="Message"
-                    android:textAllCaps="false"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#D3D3D3"
+                    app:cornerRadius="8dp"
+                    android:backgroundTint="@color/white"
                     />
             </LinearLayout>
 
@@ -323,10 +328,103 @@
                     android:layout_marginLeft="8dp"/>
 
                 <Button
+                    android:id="@+id/msg_button2"
                     android:layout_width="wrap_content"
-                    android:layout_height="38dp"
+                    android:layout_height="wrap_content"
                     android:text="Message"
-                    android:textAllCaps="false"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#D3D3D3"
+                    app:cornerRadius="8dp"
+                    android:backgroundTint="@color/white"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/oval"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_border" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="miss_potter started following you. 3d"
+                    android:textColor="#222"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp"/>
+
+                <Button
+                    android:id="@+id/follow_button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Follow"
+                    android:textColor="@color/white"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="@color/rust"
+                    app:cornerRadius="8dp"
+                    android:backgroundTint="@color/rust"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEE"/>
+
+            <!-- This Month -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This Month"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:paddingTop="10dp"
+                android:paddingLeft="14dp"
+                android:paddingBottom="4dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/oval"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_border" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="sana started following you. 3d"
+                    android:textColor="#222"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp"/>
+
+                <Button
+                    android:id="@+id/msg_button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    app:strokeWidth="2dp"
+                    app:strokeColor="#D3D3D3"
+                    app:cornerRadius="8dp"
+                    android:backgroundTint="@color/white"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -364,7 +462,6 @@
             android:src="@drawable/searchicon"
             android:contentDescription="Search"
             app:tint="@color/darkoral"
-            android:background="@color/coral"
             android:padding="8dp"/>
 
         <ImageView
@@ -382,7 +479,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/activityhearticon"
+            android:src="@drawable/filledlike"
             android:contentDescription="Likes"
             app:tint="@color/rust"
             android:padding="8dp"/>

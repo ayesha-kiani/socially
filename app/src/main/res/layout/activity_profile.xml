@@ -117,7 +117,6 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/oval"
-                    android:background="@drawable/circle_border"
                     android:layout_weight="1" />
 
                 <!-- Stats -->
@@ -225,13 +224,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Edit Profile"
-                android:textStyle="bold"
+                android:layout_marginTop="10dp"
                 android:textColor="@color/rust"
-                android:background="@drawable/btn_outline"
-                android:backgroundTint="@color/rust"
-                android:layout_margin="20dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="10dp"/>
+                app:strokeWidth="2dp"
+                app:strokeColor="#D3D3D3"
+                app:cornerRadius="8dp"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="8dp"/>
+
 
             <!-- Story Highlights Row -->
             <LinearLayout
@@ -250,6 +254,7 @@
                     android:gravity="center">
 
                     <ImageView
+                        android:id="@+id/new_story"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:src="@drawable/plus"
@@ -277,6 +282,7 @@
                     android:gravity="center">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/highlight1"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:src="@drawable/japan"
@@ -301,6 +307,7 @@
                     android:gravity="center">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/highlight2"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:src="@drawable/japan"
@@ -325,6 +332,7 @@
                     android:gravity="center">
 
                     <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/highlight3"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:src="@drawable/japan"
@@ -366,7 +374,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/menu"
+                        android:src="@drawable/grid"
                         app:tint="@color/rust" />
 
                     <View
@@ -386,7 +394,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/camera_1"
+                        android:src="@drawable/tag"
                         app:tint="@color/rust" />
 
                     <View

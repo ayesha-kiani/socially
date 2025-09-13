@@ -36,7 +36,7 @@
             android:name=".EditProfile"
             android:exported="false" />
         <activity
-            android:name=".highlights"
+            android:name=".Highlights"
             android:exported="false" />
 
         <activity

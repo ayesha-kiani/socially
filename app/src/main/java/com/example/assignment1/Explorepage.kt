@@ -20,5 +20,19 @@ class Explorepage : AppCompatActivity() {
         findViewById<EditText>(R.id.search_bar).setOnClickListener {
             startActivity(Intent(this, Searchprofile::class.java))
         }
+        findViewById<ImageView>(R.id.nav_heart).setOnClickListener {
+            startActivity(Intent(this, ActivityFollowing::class.java))
+        }
+
+        findViewById<ImageView>(R.id.nav_profile).setOnClickListener {
+            startActivity(Intent(this, Profile::class.java))
+        }
+        findViewById<ImageView>(R.id.nav_search).setOnClickListener {
+            startActivity(Intent(this, Explorepage::class.java))
+        }
+        findViewById<ImageView>(R.id.nav_add).setOnClickListener {
+            startActivity(Intent(this, Post::class.java))
+        }
+
     }
 }

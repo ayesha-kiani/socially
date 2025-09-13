@@ -278,7 +278,6 @@ android:background="@color/white">
         android:src="@drawable/searchicon"
         android:contentDescription="Search"
         app:tint="@color/darkoral"
-        android:background="@color/coral"
         android:padding="8dp"/>
 
     <ImageView
@@ -296,7 +295,7 @@ android:background="@color/white">
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:src="@drawable/activityhearticon"
+        android:src="@drawable/filledlike"
         android:contentDescription="Likes"
         app:tint="@color/rust"
         android:padding="8dp"/>

@@ -81,19 +81,20 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="56dp"
             android:src="@drawable/reels"
+            app:tint="@color/rust"
             />
 
         <ImageView
             android:id="@+id/share_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/img_2" />
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/share"
+            app:tint="@color/rust"/>
     </RelativeLayout>
 
-    <!-- Stories -->
     <HorizontalScrollView
         android:id="@+id/stories_scroll"
         android:layout_width="match_parent"
@@ -120,7 +121,8 @@
                 android:gravity="center_horizontal"
                 android:layout_marginEnd="12dp">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/myStory"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@drawable/oval"
@@ -131,13 +133,59 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Your Story"
-                    android:textColor="#B73557"
+                    android:textColor="@color/rust"
                     android:textSize="12sp"
                     android:gravity="center"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="12dp">
 
-            <!-- Add more story items as needed -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/story1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profile2"
+                    android:background="@drawable/instagram_story_ring"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sana"
+                    android:textColor="@color/rust"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="12dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/story3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profile1"
+                    android:background="@drawable/instagram_story_ring"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Craig"
+                    android:textColor="@color/rust"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
 
         </LinearLayout>
     </HorizontalScrollView>
@@ -190,7 +238,6 @@
                         android:layout_marginTop="14dp"
                         android:layout_marginStart="20dp"
                         android:layout_alignParentStart="true"
-                        app:cardBackgroundColor="@color/rust"
                         app:cardCornerRadius="25dp"
                         app:cardElevation="3dp">
 
@@ -206,7 +253,7 @@
                                 android:layout_width="46dp"
                                 android:layout_height="46dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/oval" />
+                                android:src="@drawable/profile1" />
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
@@ -221,6 +268,17 @@
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/profile_pic_holder"
+                        android:layout_marginStart="60dp"
+                        android:text="Tokyo, Japan"
+                        android:layout_below="@id/profile_name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                         />
 
                     <ImageButton
                         android:id="@+id/save_button"
@@ -230,7 +288,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_alignTop="@id/profile_pic_holder"
                         android:background="@android:color/transparent"
-                        android:src="@drawable/save" />
+                        android:src="@drawable/options" />
 
                     <ImageView
                         android:id="@+id/post_image"
@@ -306,7 +364,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/oval" />
+                            android:src="@drawable/profile2" />
 
                         <TextView
                             android:id="@+id/liked_text"

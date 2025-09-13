@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Top Bar: Fixed at top -->
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
@@ -43,14 +44,14 @@
             android:layout_marginStart="10dp"/>
     </RelativeLayout>
 
-    <!-- Scrollable content below top bar -->
     <ScrollView
         android:id="@+id/scrollview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
+        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/top_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -60,226 +61,232 @@
             android:layout_height="wrap_content"
             android:padding="8dp">
 
-            <!-- Search Bar -->
-            <EditText
-                android:id="@+id/search_bar"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:hint="Search"
-                android:textColor="@color/rust"
-                android:drawableLeft="@drawable/searchicon"
-                android:padding="8dp"
-                android:background="@android:drawable/edit_text"
-                android:textColorHint="@color/rust"
-                android:textSize="16sp" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <EditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Search"
+                    android:textColor="@color/rust"
+                    android:drawableLeft="@drawable/searchicon"
+                    android:textColorHint="@color/rust"
+                    android:textSize="16sp"
+                    android:background="@android:drawable/edit_text" />
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/scanimage"
+                    app:tint="@color/rust"/>
+            </LinearLayout>
 
             <!-- Categories Horizontal Scroll -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="6dp">
 
                 <LinearLayout
                     android:id="@+id/categories_container"
-                    style="?android:attr/buttonBarStyle"
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <Button
-                        android:id="@+id/shop"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/rust"
-                        android:text="Shop" />
 
                     <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop"
+                        android:textColor="@color/rust"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/rust"
+                        app:cornerRadius="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginEnd="4dp"/>
+                    <Button
                         android:id="@+id/style"
-                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/rust"
-                        android:text="Style" />
+                        android:text="Style"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/rust"
+                        app:cornerRadius="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginEnd="4dp"/>
 
                     <Button
                         android:id="@+id/sports"
-                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/rust"
-                        android:text="Sports" />
-
+                        android:text="Sports"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/rust"
+                        app:cornerRadius="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginEnd="4dp"/>
                     <Button
                         android:id="@+id/auto"
-                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/rust"
-                        android:text="Auto" />
-
+                        android:text="Auto"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/rust"
+                        app:cornerRadius="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginEnd="4dp"/>
                     <Button
                         android:id="@+id/music"
-                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/rust"
-                        android:text="Music" />
+                        android:text="Music"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/rust"
+                        app:cornerRadius="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginEnd="4dp"/>
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <GridLayout
-                android:id="@+id/image_grid"
+            <!-- Images Collage with Nested LinearLayouts -->
+
+            <!-- Row 1: 2 Images - first spans 1 part vertically, second spans 2 parts horizontally -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:alignmentMode="alignMargins"
-                android:useDefaultMargins="true"
-                android:padding="4dp">
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="8dp">
 
-                <!-- Top-left: one column, tall image -->
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="200dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowSpan="2"
-                    android:layout_column="0"
-                    android:layout_row="0"
+                    android:layout_weight="1"
                     android:scaleType="centerCrop"
+                    android:layout_marginEnd="4dp"
                     android:src="@drawable/greece" />
 
-                <!-- Top two: two columns wide, large image -->
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="200dp"
-                    android:layout_columnWeight="2"
-                    android:layout_columnSpan="2"
-                    android:layout_column="1"
-                    android:layout_row="0"
+                    android:layout_weight="2"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+                    android:src="@drawable/flower" />
 
-                <!-- Middle-left: one column, regular square -->
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="0"
-                    android:layout_row="2"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+            </LinearLayout>
 
-                <!-- Middle-middle: one column, regular square -->
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="1"
-                    android:layout_row="2"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
-
-                <!-- Middle-right: one column, regular square -->
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="2"
-                    android:layout_row="2"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+            <!-- Row 2: 3 equal images -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="6dp">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="0"
-                    android:layout_row="3"
+                    android:layout_weight="1"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
-
-                <!-- Middle-middle: one column, regular square -->
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="1"
-                    android:layout_row="3"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
-
-                <!-- Middle-right: one column, regular square -->
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="2"
-                    android:layout_row="3"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/japan" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="0"
-                    android:layout_row="4"
+                    android:layout_weight="1"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/birthday" />
 
-                <!-- Middle-middle: one column, regular square -->
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="1"
-                    android:layout_row="4"
+                    android:layout_weight="1"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+                    android:src="@drawable/shoes" />
+            </LinearLayout>
 
-                <!-- Middle-right: one column, regular square -->
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="2"
-                    android:layout_row="4"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="0"
-                    android:layout_row="5"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+            <!-- Row 3: 3 equal images -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="6dp">
 
-                <!-- Middle-middle: one column, regular square -->
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="1"
-                    android:layout_row="5"
+                    android:layout_weight="1"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/crafts" />
 
-                <!-- Middle-right: one column, regular square -->
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
-                    android:layout_columnWeight="1"
-                    android:layout_column="2"
-                    android:layout_row="5"
+                    android:layout_weight="1"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/greece" />
-                <!-- Add more ImageViews as you want, adjusting their column/row, rowSpan/columnSpan, and heights
-                     to create the mixed, collage/masonry effect -->
-            </GridLayout>
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/girly" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/food" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/room2" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/outdoor" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nails" />
+            </LinearLayout>
+
+            <!-- Additional rows can be added similarly -->
+
         </LinearLayout>
 
     </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
     <LinearLayout
         android:id="@+id/bottom_navbar"
         android:layout_width="0dp"
@@ -341,6 +348,5 @@
             android:contentDescription="Profile"
             android:scaleType="centerCrop"
             android:padding="4dp" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

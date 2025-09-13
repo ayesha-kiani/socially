@@ -12,7 +12,7 @@
         </shape>
     </item>
     <!-- Inner padding (white circle inside border) -->
-    <item android:left="6dp" android:top="6dp" android:right="6dp" android:bottom="6dp">
+    <item android:left="50dp" android:top="50dp" android:right="50dp" android:bottom="50dp">
         <shape android:shape="oval">
             <solid android:color="@android:color/white"/>
         </shape>

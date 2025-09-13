@@ -91,14 +91,19 @@
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/forgot_password"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rectangle_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Log in"
-        android:textSize="20sp"
-        android:layout_marginTop="14dp"/>
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/rust"
+        app:cornerRadius="8dp"
+        android:padding="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/forgot_password"
+        android:backgroundTint="@color/rust"
+        android:layout_marginEnd="32dp"/>
 
     <!-- OR separator (clean, responsive) -->
     <LinearLayout
@@ -108,7 +113,7 @@
         android:layout_below="@id/login_btn"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 

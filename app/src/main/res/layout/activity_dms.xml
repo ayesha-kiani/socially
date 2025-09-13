@@ -139,6 +139,7 @@
                     android:scaleType="centerCrop"
                     android:background="@drawable/circle_border"/>
                 <LinearLayout
+                    android:id="@+id/chat1"
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -173,6 +174,7 @@
             </LinearLayout>
             <!-- Chat row 2 -->
             <LinearLayout
+                android:id="@+id/chat2"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:paddingLeft="12dp"
@@ -221,6 +223,7 @@
             </LinearLayout>
             <!-- Chat row 3 -->
             <LinearLayout
+                android:id="@+id/chat3"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:paddingLeft="12dp"
@@ -269,6 +272,7 @@
             </LinearLayout>
             <!-- Chat row 4 -->
             <LinearLayout
+                android:id="@+id/chat4"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:paddingLeft="12dp"
@@ -339,6 +343,7 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/bottom_camera"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/camera_1"

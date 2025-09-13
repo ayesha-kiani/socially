@@ -241,14 +241,21 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#EEEEEE" />
+
         <Button
             android:id="@+id/createaccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Create an Account"
-            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:textColor="#D3D3D3"
+            app:strokeWidth="2dp"
+            app:strokeColor="#D3D3D3"
+            app:cornerRadius="8dp"
+            android:padding="18dp"
+            android:backgroundTint="@color/rust"
             />
+
     </LinearLayout>
     <ImageView
         android:id="@+id/horizontal"
