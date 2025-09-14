@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF">
+    android:background="@color/white">
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
@@ -87,7 +87,6 @@
     </LinearLayout>
 
 
-    <!-- SCROLLABLE PROFILE CONTENT -->
     <ScrollView
         android:id="@+id/scroll_content"
         android:layout_width="0dp"
@@ -103,7 +102,6 @@
             android:orientation="vertical"
             android:paddingTop="16dp">
 
-            <!-- Profile area -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,7 +117,6 @@
                     android:src="@drawable/oval"
                     android:layout_weight="1" />
 
-                <!-- Stats -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +234,6 @@
                 android:layout_marginBottom="8dp"/>
 
 
-            <!-- Story Highlights Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -245,7 +241,6 @@
                 android:gravity="center"
                 android:paddingBottom="14dp">
 
-                <!-- New story -->
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
@@ -273,7 +268,6 @@
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <!-- Friends story -->
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
@@ -298,7 +292,6 @@
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <!-- Sport story -->
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
@@ -323,7 +316,6 @@
                         android:gravity="center"/>
                 </LinearLayout>
 
-                <!-- Design story -->
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="0dp"
@@ -343,7 +335,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Design"
-                        android:textColor="#B73557"
+                        android:textColor="@color/rust"
                         android:textSize="13sp"
                         android:gravity="center"/>
                 </LinearLayout>
@@ -354,7 +346,6 @@
                 android:layout_height="1dp"
                 android:background="#D3D3D3"
                 android:layout_gravity="center"/>
-            <!-- Tabs Menu Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -406,7 +397,6 @@
             </LinearLayout>
 
 
-            <!-- Three-Photo Grid Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -471,13 +461,10 @@
                     android:scaleType="centerCrop"
                     android:layout_marginStart="2dp"/>
             </LinearLayout>
-
-            <!-- Add more grid rows as needed -->
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- FIXED BOTTOM NAVBAR -->
     <LinearLayout
         android:id="@+id/bottom_navbar"
         android:layout_width="0dp"

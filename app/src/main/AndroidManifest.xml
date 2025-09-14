@@ -58,11 +58,7 @@
         <activity
             android:name=".Explorepage"
             android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".HomepagePostAdapter" -->
-        <!-- android:exported="false" /> -->
-        <!-- <activity -->
-        <!-- android:name=".StoriesAdapter" -->
-        <!-- android:exported="false" /> -->
+
         <activity
             android:name=".Homepage"
             android:exported="false" />

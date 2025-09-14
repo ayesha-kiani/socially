@@ -4,9 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
-    <!-- Simulated Status Bar -->
     <RelativeLayout
         android:id="@+id/statusbar"
         android:layout_width="match_parent"
@@ -45,7 +44,6 @@
             android:src="@drawable/status_icons"
             app:tint="@color/black" />
     </RelativeLayout>
-    <!-- Top chat/app bar -->
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="0dp"
@@ -57,7 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Back Arrow -->
         <ImageView
             android:id="@+id/back_arrow"
             android:layout_width="28dp"
@@ -66,7 +63,6 @@
             android:src="@drawable/chevronleft"
             app:tint="@color/rust"/>
 
-        <!-- Circle profile (initials) -->
         <ImageView
             android:layout_width="34dp"
             android:layout_height="34dp"
@@ -76,7 +72,6 @@
             android:background="@drawable/circle_border"
             android:scaleType="centerCrop"/>
 
-        <!-- Username -->
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -101,12 +96,11 @@
             android:layout_marginEnd="10dp"/>
     </LinearLayout>
 
-    <!-- Message area (use a ScrollView for demo, replace with RecyclerView for real chat) -->
     <ScrollView
         android:id="@+id/message_scroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/statusbar"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
         app:layout_constraintBottom_toTopOf="@id/message_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

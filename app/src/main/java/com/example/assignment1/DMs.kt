@@ -27,7 +27,16 @@ class DMs : AppCompatActivity() {
             startActivity(Intent(this, TakePicture::class.java))
         }
         findViewById<ImageView>(R.id.back_arrow).setOnClickListener {
-            startActivity(Intent(this, Homepage::class.java))
+            finish()
+        }
+        findViewById<ImageView>(R.id.camera_chat1).setOnClickListener {
+            startActivity(Intent(this, TakePicture::class.java))
+        }
+        findViewById<ImageView>(R.id.camera_chat2).setOnClickListener {
+            startActivity(Intent(this, TakePicture::class.java))
+        }
+        findViewById<ImageView>(R.id.camera_chat3).setOnClickListener {
+            startActivity(Intent(this, TakePicture::class.java))
         }
     }
 }

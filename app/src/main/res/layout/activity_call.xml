@@ -3,21 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
-    android:background="@color/rust"
+    android:background="@color/darkoral"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Profile Image -->
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/oval"
+        android:src="@drawable/profile1"
         android:scaleType="centerCrop"
         android:background="@drawable/circle_border" />
 
-    <!-- Name -->
     <TextView
         android:id="@+id/caller_name"
         android:layout_below="@id/profile_image"
@@ -25,12 +23,11 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mother ❤️"
+        android:text="Mother"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@android:color/white" />
 
-    <!-- Call Timer -->
     <TextView
         android:id="@+id/call_timer"
         android:layout_below="@id/caller_name"
@@ -42,7 +39,6 @@
         android:textSize="20sp"
         android:textColor="@android:color/white" />
 
-    <!-- Message/Notes Button (Left) -->
     <ImageView
         android:id="@+id/notes_btn"
         android:layout_width="44dp"
@@ -55,7 +51,6 @@
         android:layout_marginBottom="54dp"
         android:background="@android:color/transparent" />
 
-    <!-- Hangup Button (Center) -->
     <ImageView
         android:id="@+id/hangup_btn"
         android:layout_width="100dp"
@@ -65,7 +60,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp" />
 
-    <!-- Speaker Button (Right) -->
     <ImageView
         android:id="@+id/speaker_btn"
         android:layout_width="50dp"

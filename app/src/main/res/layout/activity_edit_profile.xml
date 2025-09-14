@@ -5,7 +5,6 @@
     android:background="#FFF"
     android:id="@+id/main">
 
-    <!-- Top bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -20,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Cancel"
-            android:textColor="#444"
+            android:textColor="@color/coral"
             android:textSize="16sp"/>
 
         <TextView
@@ -28,8 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="Edit Profile"
-            android:textStyle="bold"
-            android:textColor="#B73557"
+            android:textColor="@color/rust"
             android:gravity="center"
             android:textSize="18sp"/>
 
@@ -39,13 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Done"
-            android:textColor="#B73557"
+            android:textColor="@color/rust"
             android:textStyle="bold"
             android:gravity="end"
             android:textSize="16sp"/>
     </LinearLayout>
 
-    <!-- Profile Photo Section -->
     <LinearLayout
         android:orientation="vertical"
         android:gravity="center"
@@ -67,12 +64,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Change Profile Photo"
-            android:textColor="#B73557"
+            android:textColor="@color/rust"
             android:textSize="15sp"
             android:paddingTop="8dp"/>
     </LinearLayout>
 
-    <!-- Info Block 1 -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -93,14 +89,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Name"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="Jacob West"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -115,14 +111,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Username"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="jacob_w"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -137,14 +133,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Website"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="Website"
-                android:textColor="#AAA"/>
+                android:textColor="#808080"/>
         </LinearLayout>
 
         <LinearLayout
@@ -159,39 +155,36 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Bio"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="Digital goodies designer @pixsellz\nEverything is designed."
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Switch Link -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Switch to Professional Account"
-        android:textColor="#B48A8A"
+        android:textColor="@color/rust"
         android:paddingLeft="16dp"
         android:paddingTop="18dp"
         android:textSize="15sp"/>
 
-    <!-- Private Info Section Title -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Private Information"
         android:textStyle="bold"
-        android:textColor="#444"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:paddingStart="16dp"
         android:paddingTop="16dp"/>
 
-    <!-- Info Block 2 -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -211,14 +204,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Email"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="jacob.west@gmail.com"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -233,14 +226,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Phone"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="+1 202 555 0147"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -255,14 +248,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Gender"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:text="Male"
-                android:textColor="#222"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

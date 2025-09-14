@@ -46,12 +46,11 @@
             app:tint="@color/black" />
     </RelativeLayout>
 
-    <!-- Top Action Bar: Cancel - Recents - Next -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="#FFF"
+        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/top_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -61,25 +60,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
-            android:textColor="#B48988"
+            android:textColor="@color/coral"
             android:textSize="17sp"
             android:layout_marginStart="18dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
-        <TextView
-            android:id="@+id/recents"
+        <LinearLayout
+            android:id="@+id/recents_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recents ▼"
-            android:textColor="#B48988"
-            android:textSize="17sp"
-            android:textStyle="bold"
+            android:orientation="horizontal"
+            android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/recents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recents"
+                android:textColor="@color/rust"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chevrondown"
+                app:tint="@color/rust"/>
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/next"
@@ -95,7 +112,6 @@
             app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Main Photo Preview -->
     <ImageView
         android:id="@+id/main_photo"
         android:layout_width="0dp"
@@ -106,14 +122,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Gallery Options Row (∞, copy, select multiple icons) -->
     <LinearLayout
         android:id="@+id/gallery_options"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:orientation="horizontal"
         android:gravity="end|center_vertical"
-        android:background="#80000000"
+        android:background="@android:color/transparent"
         android:paddingEnd="16dp"
         app:layout_constraintBottom_toBottomOf="@id/main_photo"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,12 +157,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SELECT MULTIPLE"
-            android:textColor="#FFF"
+            android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Scrollable Gallery Grid using ScrollView + nested LinearLayouts -->
     <ScrollView
         android:id="@+id/gallery_scroll"
         android:layout_width="0dp"
@@ -163,7 +177,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Row 1 of 4 images -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -201,7 +214,6 @@
                     android:layout_margin="1dp" />
             </LinearLayout>
 
-            <!-- Row 2 of 4 images -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -240,7 +252,6 @@
                     android:layout_margin="1dp" />
             </LinearLayout>
 
-            <!-- Row 3 of 4 images -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -279,7 +290,6 @@
                     android:layout_margin="1dp" />
             </LinearLayout>
 
-            <!-- Row 4 of 4 images -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -320,7 +330,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Sheet with rounded top corners -->
     <LinearLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
@@ -329,7 +338,6 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- Tab Row: Library Photo Video -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -365,7 +373,6 @@
                 android:textSize="17sp" />
         </LinearLayout>
 
-        <!-- Bottom Pill Indicator -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

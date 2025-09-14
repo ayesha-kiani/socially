@@ -13,7 +13,7 @@ class Viewmyactivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_viewmyactivity)
         findViewById<ImageView>(R.id.close).setOnClickListener {
-            startActivity(Intent(this, Homepage::class.java))
+            finish()
         }
     }
 }

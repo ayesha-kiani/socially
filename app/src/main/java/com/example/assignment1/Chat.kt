@@ -20,7 +20,7 @@ class Chat : AppCompatActivity() {
             startActivity(Intent(this, TakePicture::class.java))
         }
         findViewById<ImageView>(R.id.back_arrow).setOnClickListener {
-            startActivity(Intent(this, DMs::class.java))
+            finish()
         }
     }
 }

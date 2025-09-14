@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/darkoral">
 
-    <!-- Top bar container -->
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -88,7 +87,6 @@
             android:layout_marginBottom="18dp"
             />
 
-        <!-- Username Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,7 +112,6 @@
             android:layout_height="1dp"
             android:background="#EEEEEE" />
 
-        <!-- Your Name Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -139,7 +136,6 @@
             android:layout_height="1dp"
             android:background="#EEEEEE" />
 
-        <!-- Last Name Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,7 +160,6 @@
             android:layout_height="1dp"
             android:background="#EEEEEE" />
 
-        <!-- Date of Birth Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -190,7 +185,6 @@
             android:layout_height="1dp"
             android:background="#EEEEEE" />
 
-        <!-- email Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -216,7 +210,6 @@
             android:layout_height="1dp"
             android:background="#EEEEEE" />
 
-        <!-- password Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -266,7 +259,6 @@
         android:layout_below="@id/signup_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-
         />
 
 </RelativeLayout>

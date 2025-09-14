@@ -9,7 +9,6 @@
     android:paddingStart="0dp"
     android:paddingEnd="0dp">
 
-    <!-- Top bar container -->
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -45,7 +44,6 @@
             android:layout_marginStart="10dp"/>
     </RelativeLayout>
 
-    <!-- Center logo -->
     <TextView
         android:id="@+id/socially_text"
         android:layout_width="wrap_content"
@@ -147,10 +145,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         />
-
-
-
-
-
 
 </RelativeLayout>

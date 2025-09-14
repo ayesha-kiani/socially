@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
@@ -45,7 +44,6 @@
             app:tint="@color/black" />
     </RelativeLayout>
 
-    <!-- Navigation bar -->
     <RelativeLayout
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
@@ -113,7 +111,6 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp">
 
-            <!-- Story item example -->
             <LinearLayout
                 android:layout_width="70dp"
                 android:layout_height="90dp"
@@ -190,13 +187,11 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- Divider -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#EEE" />
+        android:background="#D3D3D3" />
 
-    <!-- Posts Section -->
     <ScrollView
         android:id="@+id/posts_scroll"
         android:layout_width="match_parent"
@@ -212,7 +207,6 @@
             android:orientation="vertical"
             android:paddingBottom="16dp">
 
-            <!-- Example Post Item -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -229,7 +223,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_alignParentTop="true"
-                        android:background="#EEE" />
+                        android:background="#D3D3D3" />
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/profile_pic_holder"
@@ -348,7 +342,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_below="@id/action_buttons"
-                        android:background="#ddd" />
+                        android:background="#D3D3D3" />
 
                     <LinearLayout
                         android:id="@+id/likes_info"
@@ -390,13 +384,10 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Duplicate above CardView for another post -->
-            <!-- ... -->
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation Bar -->
     <LinearLayout
         android:id="@+id/bottom_navbar"
         android:layout_width="match_parent"

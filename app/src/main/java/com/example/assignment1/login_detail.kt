@@ -14,7 +14,10 @@ class LoginDetail : AppCompatActivity() {
             startActivity(Intent(this, Register::class.java))
         }
         findViewById<Button>(R.id.login_btn).setOnClickListener {
-            startActivity(Intent(this, Homepage::class.java))
+            val intent = Intent(this, Homepage::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
         }
     }
 }

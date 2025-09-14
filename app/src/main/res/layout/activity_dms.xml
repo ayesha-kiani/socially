@@ -7,7 +7,6 @@
     android:id="@+id/main"
     >
 
-    <!-- Status Bar -->
     <RelativeLayout
         android:id="@+id/statusbar"
         android:layout_width="match_parent"
@@ -46,7 +45,7 @@
             android:src="@drawable/status_icons"
             app:tint="@color/black" />
     </RelativeLayout>
-    <!-- ScrollView for main content -->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -57,19 +56,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:fillViewport="true">
 
-        <!-- Your existing LinearLayout and content go here -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <!-- Top bar -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:background="#FFF"
+                android:background="@color/white"
                 >
                 <ImageView
                     android:id="@+id/back_arrow"
@@ -97,7 +94,7 @@
                     android:layout_alignParentEnd="true"
                     app:tint="@color/rust"/>
             </RelativeLayout>
-            <!-- Search bar -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
@@ -123,7 +120,7 @@
                     android:paddingLeft="8dp"
                     android:inputType="text"/>
             </LinearLayout>
-            <!-- Chat row 1 -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
@@ -150,29 +147,30 @@
                         android:text="joshua_l"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#222"/>
+                        android:textColor="@color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Have a nice day, bro!"
                         android:textSize="14sp"
-                        android:textColor="#444"/>
+                        android:textColor="@color/black"/>
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="∙ now"
-                    android:textColor="#AAA"
+                    android:textColor="#808080"
                     android:textSize="13sp"
                     android:layout_marginLeft="6dp"/>
                 <ImageView
+                    android:id="@+id/camera_chat1"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/camera_1"
                     android:layout_marginLeft="10dp"
                     app:tint="@color/rust"/>
             </LinearLayout>
-            <!-- Chat row 2 -->
+
             <LinearLayout
                 android:id="@+id/chat2"
                 android:layout_width="match_parent"
@@ -199,22 +197,23 @@
                         android:text="karennne"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#222"/>
+                        android:textColor="@color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="I heard this is a good movie, s..."
                         android:textSize="14sp"
-                        android:textColor="#444"/>
+                        android:textColor="@color/black"/>
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="∙ now"
-                    android:textColor="#AAA"
+                    android:textColor="#808080"
                     android:textSize="13sp"
                     android:layout_marginLeft="6dp"/>
                 <ImageView
+                    android:id="@+id/camera_chat2"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/camera_1"
@@ -248,29 +247,30 @@
                         android:text="martini_rond"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#222"/>
+                        android:textColor="@color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="See you on the next meeting!"
                         android:textSize="14sp"
-                        android:textColor="#444"/>
+                        android:textColor="@color/black"/>
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="∙ 15m"
-                    android:textColor="#AAA"
+                    android:textColor="#808080"
                     android:textSize="13sp"
                     android:layout_marginLeft="6dp"/>
                 <ImageView
+                    android:id="@+id/camera_chat3"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/camera_1"
                     android:layout_marginLeft="10dp"
                     app:tint="@color/rust"/>
             </LinearLayout>
-            <!-- Chat row 4 -->
+
             <LinearLayout
                 android:id="@+id/chat4"
                 android:layout_width="match_parent"
@@ -297,22 +297,23 @@
                         android:text="andrewww_"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#222"/>
+                        android:textColor="@color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sounds good 😂😂😂"
+                        android:text="Sounds good"
                         android:textSize="14sp"
-                        android:textColor="#444"/>
+                        android:textColor="@color/black"/>
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="∙ 20m"
-                    android:textColor="#AAA"
+                    android:textColor="#808080"
                     android:textSize="13sp"
                     android:layout_marginLeft="6dp"/>
                 <ImageView
+                    android:id="@+id/camera_chat4"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/camera_1"
@@ -322,7 +323,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom overlay for camera button and progress bar -->
     <LinearLayout
         android:id="@+id/bottom_controls"
         android:layout_width="match_parent"
@@ -354,7 +354,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Camera"
-                android:textColor="#222"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
         </LinearLayout>

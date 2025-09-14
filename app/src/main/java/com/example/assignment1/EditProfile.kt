@@ -15,10 +15,10 @@ class EditProfile : AppCompatActivity() {
         setContentView(R.layout.activity_edit_profile)
 
         findViewById<TextView>(R.id.cancel).setOnClickListener {
-            startActivity(Intent(this, Profile::class.java))
+            finish()
         }
         findViewById<TextView>(R.id.done).setOnClickListener {
-            startActivity(Intent(this, Profile::class.java))
+            finish()
         }
 
     }

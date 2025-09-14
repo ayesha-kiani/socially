@@ -42,7 +42,7 @@
             android:src="@drawable/status_icons"
             app:tint="@color/black" />
     </RelativeLayout>
-    <!-- Search bar row -->
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -75,7 +75,6 @@
             android:textSize="16sp" />
     </LinearLayout>
 
-    <!-- Tabs row -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -123,7 +122,6 @@
             android:textColor="#888888" />
     </LinearLayout>
 
-    <!-- Static Results with ScrollView -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -135,7 +133,6 @@
             android:orientation="vertical"
             android:divider="?android:attr/dividerHorizontal">
 
-            <!-- 1st Row: Account Result -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -173,7 +170,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 2nd Row: Hashtag -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -211,7 +207,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 3rd Row: Hashtag -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -249,7 +244,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 4th Row: Organization/Location -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -287,7 +281,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 5th Row: Hashtag -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -325,7 +318,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 6th Row: Hashtag only -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"

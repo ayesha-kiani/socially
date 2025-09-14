@@ -87,7 +87,6 @@
                     app:tint="@color/rust"/>
             </LinearLayout>
 
-            <!-- Categories Horizontal Scroll -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,9 +157,7 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!-- Images Collage with Nested LinearLayouts -->
 
-            <!-- Row 1: 2 Images - first spans 1 part vertically, second spans 2 parts horizontally -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -185,7 +182,6 @@
 
             </LinearLayout>
 
-            <!-- Row 2: 3 equal images -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -217,7 +213,6 @@
                     android:src="@drawable/shoes" />
             </LinearLayout>
 
-            <!-- Row 3: 3 equal images -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -280,13 +275,10 @@
                     android:src="@drawable/nails" />
             </LinearLayout>
 
-            <!-- Additional rows can be added similarly -->
-
         </LinearLayout>
 
     </ScrollView>
 
-    <!-- Bottom Navigation Bar -->
     <LinearLayout
         android:id="@+id/bottom_navbar"
         android:layout_width="0dp"

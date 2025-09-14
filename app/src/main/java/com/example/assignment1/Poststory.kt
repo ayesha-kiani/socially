@@ -16,5 +16,7 @@ class Poststory : AppCompatActivity() {
         findViewById<ImageView>(R.id.share_row).setOnClickListener {
             startActivity(Intent(this, Homepage::class.java))
         }
+
+
     }
 }

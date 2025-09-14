@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main">
+    android:id="@+id/main"
+    android:background="@color/black">
 
-    <!-- Status Bar -->
     <ImageView
         android:id="@+id/statusbar"
         android:layout_width="match_parent"
@@ -13,63 +13,69 @@
         android:src="@drawable/statusbar"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent" />
-    <!-- Story Image -->
-    <ImageView
-        android:id="@+id/storyImage"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/storyCard"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/tree"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="0dp"
+        android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@id/statusbar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_black_overlay"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/storyImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tree" />
+    </androidx.cardview.widget.CardView>
+
     <ImageView
         android:id="@+id/tools_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/typestory"
         android:adjustViewBounds="true"
-        app:layout_constraintTop_toTopOf="@id/storyImage"
+        app:layout_constraintTop_toTopOf="@id/storyCard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="Story editing tools" />
+
     <LinearLayout
         android:id="@+id/bottom_black_overlay"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="96dp"
         android:orientation="vertical"
         android:background="#CC000000"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Share Bar (bottom share options row) -->
         <ImageView
             android:id="@+id/share_row"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/toolbar"
             android:adjustViewBounds="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="24dp"
-            android:contentDescription="Share options" />
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="4dp"
-            android:src="@drawable/blackline"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Share options"
+            android:layout_gravity="center_horizontal" />
+        <View
+            android:layout_width="150dp"
+            android:layout_height="6dp"
+            android:background="@drawable/blackline"
+            android:backgroundTint="@color/rust"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            app:tint="@color/rust"
-            android:layout_marginTop="16dp"
             />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

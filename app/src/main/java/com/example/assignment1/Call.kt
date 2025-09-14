@@ -14,7 +14,7 @@ class Call : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call)
         findViewById<ImageView>(R.id.hangup_btn).setOnClickListener {
-            startActivity(Intent(this, Chat::class.java))
+            finish()
         }
     }
 }

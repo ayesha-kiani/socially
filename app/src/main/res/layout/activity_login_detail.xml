@@ -7,7 +7,6 @@
     android:background="@color/white"
     android:paddingTop="10dp">
 
-    <!-- Top bar container -->
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -55,7 +54,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp" />
 
-    <!-- Username input with underline -->
     <EditText
         android:id="@+id/enterusername"
         android:layout_width="match_parent"
@@ -66,7 +64,6 @@
         android:layout_marginTop="24dp"
         android:padding="14dp"/>
 
-    <!-- Password input with underline -->
     <EditText
         android:id="@+id/enterpassword"
         android:layout_width="match_parent"
@@ -105,7 +102,6 @@
         android:backgroundTint="@color/rust"
         android:layout_marginEnd="32dp"/>
 
-    <!-- OR separator (clean, responsive) -->
     <LinearLayout
         android:id="@+id/separator"
         android:layout_width="match_parent"
@@ -139,7 +135,6 @@
             android:background="#D3D3D3" />
     </LinearLayout>
 
-    <!-- Sign up text block -->
     <RelativeLayout
         android:id="@+id/signupline_text"
         android:layout_width="wrap_content"
@@ -167,7 +162,6 @@
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <!-- Bottom line separator -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -175,7 +169,6 @@
         android:layout_marginBottom="56dp"
         android:background="#D3D3D3" />
 
-    <!-- Bottom brand label -->
     <TextView
         android:id="@+id/sociallybottom"
         android:layout_width="wrap_content"
@@ -196,6 +189,4 @@
         android:src="@drawable/line"
         android:layout_marginBottom="5dp"
         />
-
-
 </RelativeLayout>
